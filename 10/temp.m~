@@ -1,0 +1,22 @@
+clear all;
+close all;
+
+x = -10:0.01:10;
+
+y = sqrt((9-(x.^2))/4);
+y1 = -y;
+
+figure();
+plot(x,y,x,y1);
+grid on;
+
+x = -10:0.01:10;
+
+y = (((x.^2))/4);
+
+figure();
+plot(x,y,x,y1);
+grid on;
+
+
+

@@ -1,0 +1,11 @@
+clear all;
+close all;
+
+x=0;
+y=0;
+ep = 1e-6;
+esum = 1;
+
+while esum>ep
+    arr = [fxy(x,y) ; gxy(x,y)]
+end

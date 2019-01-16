@@ -1,0 +1,50 @@
+clear all;
+close all;
+
+x=0:0.01:6;
+y = exp(-x);
+figure();
+plot(x,y);
+legend('exp(-x)');
+grid on;
+hold on;
+
+e1 = zeros(length(x),1);
+
+h = 0.2;
+x1 = 0:h:6;
+y1 = zeros(length(x1),1);
+y1(1) =  1;
+y(1) = 1;
+
+for i=2:length(x1)
+   y1(i) = (1-h) * y1(i-1);
+   e1(i) = abs(exp(-x1(i))-y1(i));
+end
+
+h = 0.1;
+x2 = 0:h:6;
+
+y1 = zeros(length(x),1);
+y1(1) =  1;
+
+for i=2:length(x)
+   y1(i) = (1-h) * y1(i-1); 
+end
+
+plot(x,y1);
+
+
+h = 0.05;
+x = 0:h:6;
+
+y1 = zeros(length(x),1);
+y1(1) =  1;
+
+for i=2:length(x)
+   y1(i) = (1-h) * y1(i-1); 
+end
+
+plot(x,y1);
+hold off;
+
